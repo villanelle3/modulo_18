@@ -1,0 +1,24 @@
+{
+  "name": "3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "grunt": "grunt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/villanelle3/modulo_18.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/villanelle3/modulo_18/issues"
+  },
+  "homepage": "https://github.com/villanelle3/modulo_18#readme",
+  "devDependencies": {
+    "grunt": "^1.6.1",
+    "grunt-contrib-less": "^3.0.0"
+  }
+}
