@@ -53,7 +53,7 @@ module.exports = function(grunt){
                     },
                     {
                         match: 'ENDEREÇO_DO_JS',
-                        replacement: '../src/scripts/main.js'
+                        replacement: '../src/scripts/main.min.js'
                     }]
                 },
                 files: [
@@ -74,15 +74,23 @@ module.exports = function(grunt){
             files: {'prebuild/index.html':'src/index.html'}
             },
         },
-        clean: ['prebuild']
+        clean: ['prebuild'],
+        uglify: {
+            target: {
+                files: {
+                'dist/scripts/main.min.js': ['src/scripts/main.js']
+                }
+            }
+        }
     }); 
 
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-replace');
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
     grunt.loadNpmTasks('grunt-contrib-clean');
 
     grunt.registerTask('default', ['watch']);
-    grunt.registerTask('build', ['less:production', "htmlmin:dist", "replace:dist", "clean"]);
+    grunt.registerTask('build', ['less:production', "htmlmin:dist", "replace:dist", "clean", "uglify"]);
 }

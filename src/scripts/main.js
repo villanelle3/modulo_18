@@ -1,11 +1,21 @@
-function logSubmit(event) {
-    event.preventDefault();
-    const MaxNumber = document.getElementById('num-max').value;
-    let random = Math.floor(Math.random() * MaxNumber);
-    document.getElementById(result).innerText = random
-    form.reset();
-}
+window.addEventListener('DOMContentLoaded', () => {
+    console.log('DOM fully loaded and parsed');
+    function logSubmit(event) {
+        event.preventDefault();
+        const MaxNumber = document.getElementById('num-max').value;
+        let random = Math.floor(Math.random() * MaxNumber);
+        form.reset();
+        subs(random)
+    }
 
-const form = document.getElementById('a');
-form.addEventListener('submit', logSubmit);
+    function subs(num){
+        console.log(num)
+        document.getElementById(res).innerText= num
+    }
+    
+    const form = document.getElementById('a');
+    form.addEventListener('submit', logSubmit);
+});
+
+
 
