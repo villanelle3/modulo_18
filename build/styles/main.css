@@ -55,3 +55,7 @@ input {
   font-weight: bold;
   border-bottom: 5px solid blueviolet;
 }
+.result {
+  text-align: center;
+  margin: 0 auto;
+}
